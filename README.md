@@ -28,7 +28,7 @@ Discover the future of human-computer interaction with Rose - Your voice-activat
   Rose can open files, folders, and even launch other software applications like Notepad or the camera.
   
 <h3>Demo Video:</h3>
-(Don't miss the End😁) <br><br>
+(Must listen the End😁) <br><br>
 
 https://github.com/meemanali/Rose_Voice-Controlled-Windows-App/assets/120294764/6e1e53e2-dc23-4ce5-a4d7-079c6c6420cb
 
