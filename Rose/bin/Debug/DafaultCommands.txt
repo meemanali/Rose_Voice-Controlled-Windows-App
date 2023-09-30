@@ -1,0 +1,145 @@
+Commands U Can Give:
+Hello
+Hi
+Whatsup
+What is your name
+Hey rose
+Rose
+Are you listening
+R u listening
+Introduce yourself
+What are you doing
+Thank you
+Sorry
+How are you
+What time is it
+What exactly time is it
+What date is it
+What hour is it
+What day is it
+What month is it
+What year is it
+Rose i love you
+I love you
+Change your voice
+Play a demo of your all voices
+Play your all voices
+Play voices available in this computer
+I hate you
+Stop
+Shut up
+Rose Behave
+Behave rose
+Show commands
+Hide commands
+Show my commands
+Show commands given by me
+Hide my commands
+Show all commands
+Hide all commands
+Hide all items
+Show all items
+Minimize window
+Maximize window
+Normal window
+Un maximized window
+Show CPU monitor
+Open CPU monitor
+Show current running application
+Show notification panel
+Hide notification panel
+Remove borders of my commands listbox
+Remove borders of commands listbox
+Remove borders of notification listbox
+Remove borders of all listboxes
+Add borders of my commands listbox
+Add borders of commands listbox
+Add borders of notifications listbox
+Add borders of all listboxes
+Speak normaly
+Speak slowly
+Speak very slowly
+Speak faster
+Speak very faster
+Mute yourself rose
+Mute yourself
+Unmute yourself rose
+Unmute yourself
+I am feeling bored
+I am getting bored
+I am very bored
+Rose i feel boring
+I feel boring
+I think i am getting bored
+Select all
+Cut
+Copy
+Paste
+Open notepad
+Close notepad
+Open task manager
+Open courses
+Open files
+Open files manager
+Open movies
+Open songs
+Play peaky blinders music in vlc
+Play peaky blinders music
+Stop your music
+Pause your music
+Resume your music
+Show music list
+Hide music list
+Show all available songs
+Show all songs
+Change your grammer to default
+Set your grammer as default
+Change your grammer to specific
+Set your grammer as specific
+Search for
+Open chrome
+Open vlc
+Show your picture
+Hide your picture
+Close it
+See your left
+See to the right
+See your right
+See to the left
+Stop blinking your eye
+You can blink your eye
+Show me yourself
+Show yourself
+Show me your complete 
+Show your body
+I want to see you
+Show me your face only
+Show your face only
+Hide your body
+Hide yourself
+F
+Full screen
+Escape
+Up
+Down
+Right
+Left
+Page up
+Page down
+Space
+Enter
+Backspace
+Tab
+Search
+Stop listening
+Wake up
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
