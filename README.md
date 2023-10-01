@@ -40,8 +40,10 @@ https://github.com/meemanali/Rose_Voice-Controlled-Windows-App/assets/120294764/
 # Getting Started:
 
 * Follow these steps to set up and run Rose on your computer:
-  * Clone the repository: git clone https://github.com/meemanali/Rose_Voice-Controlled-Windows-App/
+  * Clone the repository: git clone https://github.com/meemanali/Rose_Voice-Controlled-Windows-App/.
   * Open the project in Visual Studio (or your preferred C# IDE).
+  * Set directories according to your System eg Movies, Songs Folder etc.
+  * Add new commands, if you want, in "DafaultCommands.txt" file present in Rose\Rose\bin\Debug. Don't forget to set command's behaviour in "Form1.cs" file.
   * Build and run the application.
   
 * Usage:
