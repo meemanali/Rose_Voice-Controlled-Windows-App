@@ -14,7 +14,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading;
 using WMPLib; // by using this we can play audio (audio or video but in background)
-//using System.Media;// this can play only .wav files
+//using System.Media; // this library can play only .wav files
 
 namespace Rose
 {    
@@ -23,19 +23,13 @@ namespace Rose
         public static Form1 instanceofform;               
 
         SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine();
-        SpeechRecognitionEngine startlistening = new SpeechRecognitionEngine();        
-        //SpeechRecognitionEngine openmukhtarep = new SpeechRecognitionEngine();
-        
+        SpeechRecognitionEngine startlistening = new SpeechRecognitionEngine();
 
         SpeechSynthesizer rose = new SpeechSynthesizer();
 
         Random rnd = new Random();
 
-        public static WindowsMediaPlayer windowmediaplayer = new WindowsMediaPlayer(); // it is an interface        
-
-
-        //bool search;
-        //string chatter = "";
+        public static WindowsMediaPlayer windowmediaplayer = new WindowsMediaPlayer();
 
         public Form1()
         {
@@ -44,11 +38,9 @@ namespace Rose
             instanceofform = this;
 
                      
-
             //recognizer.LoadGrammarAsync(new Grammar(new GrammarBuilder(new Choices(num))));//we can also give array here
 
             //recognizer.SpeechDetected += new EventHandler<SpeechDetectedEventArgs>(recognizer_SpeechRecognized);
-
 
             //roseface1.BringToFront();
 
@@ -66,16 +58,7 @@ namespace Rose
             startlistening.LoadGrammarAsync(new Grammar(new GrammarBuilder(new Choices("Wake up"))));
             startlistening.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(startlistening_SpeechRecognized);
 
-
-            ////this code will give array values from 0 to 100:
-            //string[] epnumberstorer = new string[41];
-            //for (int i = 0; i < 41; i++)
-            //{
-            //    epnumberstorer[i] = (i+1).ToString();
-
-            //    //num[i] = Convert.ToString(i + 1);                                              
-            //}
-
+        
 
             // these lines will show installed voices in computer:
             //Roseface.instance.lstmc.Items.Clear();
@@ -84,17 +67,8 @@ namespace Rose
             //    Roseface.instance.lstmc.Items.Add(item.VoiceInfo.Name);
             //}
 
-
-
-            //openmukhtarep.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(openmukhtarep_Speechrecognized);
-        }
-        //private void openmukhtarep_Speechrecognized(object sender, SpeechRecognizedEventArgs e)
-        //{
-        //    string speech = e.Result.Text;
-        //    Roseface.instance.lstmc.Items.Add(e.Result.Text.ToString());
-
-        //    Process.Start(@"F:\Islamic Movies\Mukhtar Namah\ep-" + speech);            
-        //}
+    
+        }     
 
         string speech = "";
         private void Default_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -104,13 +78,7 @@ namespace Rose
             roseface1.lstmc.Items.Add(speech);
 
             commandexe(speech);
-            
-            
-            //below code will genrate error if speech is other than 0 to 100 cause of convert func
-            //if (Convert.ToInt32(speech) >= 0 && Convert.ToInt32(speech) <= 100)
-            //{                
-            //    SendKeys.Send(speech);
-            //}               
+                        
         }
 
         private void startlistening_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -283,10 +251,10 @@ namespace Rose
                     rose.SpeakAsync("ok");                    
                     break;
 
-                //showing commands
+                // showing commands
 
                 case "Show commands":                    
-                    roseface1.lstc.Items.Clear();//if we dont do this,these commands r also print with previous same commands
+                    roseface1.lstc.Items.Clear(); // if we dont do this, these commands r also print with previous same commands
                     roseface1.lstc.Visible = true;
                     blinkingstoper();
                     
@@ -324,7 +292,7 @@ namespace Rose
 
                 case "Show all commands":
                     blinkingstoper();                    
-                    roseface1.lstc.Items.Clear();//if we dont do this,these commands r also print with previous same commands
+                    roseface1.lstc.Items.Clear(); // if we dont do this,these commands r also print with previous same commands
                     roseface1.lstc.Visible = true;
 
                     foreach (string command in File.ReadAllLines(@"DafaultCommands.txt"))
@@ -461,8 +429,7 @@ namespace Rose
                     else
                     {
                         rose.Rate = -4;
-                        rose.SpeakAsync("ok i will speak very slowly");
-                        //rose.Rate = Convert.ToInt16(1 / 8);// this will nothing do cause  i think convert class convert it to 1
+                        rose.SpeakAsync("ok i will speak very slowly");                        
                     }                    
                     break;
 
@@ -486,8 +453,7 @@ namespace Rose
                     else
                     {
                         rose.Rate = 4;
-                        rose.SpeakAsync("ok i will speak very faster");
-                        //rose.Rate = Convert.ToInt16(1 / 8);// this will nothing do cause i think convert class convert it to 1
+                        rose.SpeakAsync("ok i will speak very faster");                    
                     }
                     break;
 
@@ -598,32 +564,13 @@ namespace Rose
                     Process.Start("explorer.exe");
                     blinkingstoper();
                     break;
-
-                case "Open mukhtaar nama":
-                    rose.SpeakAsync("opening mukhtaar nama");                    
-                    Process.Start(@"F:\Islamic Movies\Mukhtar Namah",ProcessWindowStyle.Hidden.ToString());
-                    rose.SpeakAsync("eemaan, which episode you want to watch");
-                    Thread.Sleep(3000);
-                    SendKeys.Send("^{e}");
-                    blinkingstoper();
-                    //below code will only gets the name of file which we select or open in ofd:
-                    //OpenFileDialog ofd = new OpenFileDialog();
-                    //ofd.InitialDirectory = @"F:\Islamic Movies\Mukhtar Namah";
-                    //ofd.Title = "Mukhtar Nama";
-                    //ofd.ShowDialog();
-                    break;                
-
+               
                 case "Open movies":
                     rose.SpeakAsync("Opening movies");
                     Process.Start(@"F:\Movies");
                     blinkingstoper();
                     break;                
-
-                case "Open islamic movies":
-                    rose.SpeakAsync("Opening islamic movies");
-                    Process.Start(@"F:\Islamic Movies");
-                    blinkingstoper();
-                    break;
+              
 
                 case "Open songs":
                     rose.SpeakAsync("Opening songs");
@@ -688,22 +635,7 @@ namespace Rose
                     }             
                     roseface1.cbmusic.Focus();
                     blinkingstoper();
-                    break;
-
-                case "Show all nohay":
-                case "Show all nohaas":
-                    roseface1.cbmusic.Visible = true;
-                    roseface1.lbltitle.Visible = true;
-                    roseface1.lbltitle.Text = "Nohay:";
-
-                    string[] nohay = Directory.GetFiles(@"F:\Eeman Data\Nohay");
-                    foreach (string item in nohay)
-                    {
-                        roseface1.cbmusic.Items.Add(item.Substring(20)); // substring(20) will remove path and shows only song
-                    }             
-                    roseface1.cbmusic.Focus();
-                    blinkingstoper();
-                    break;
+                    break;               
                 
                 case "Change your grammer to default":
                 case "Set your grammer as default":
