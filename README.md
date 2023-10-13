@@ -58,9 +58,6 @@ We welcome contributions! If you'd like to enhance Rose or fix any issues, pleas
 # License:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-# Acknowledgments:
-Special thanks to the .NET speech recognition library for making this project possible.
-
 # Contact:
 If you have any questions or suggestions, please feel free to contact us at meemanali72@email.com.
 
